@@ -30,7 +30,7 @@ class Game {
         this.playerPoints.innerHTML = this.player.calculatePoints();
 
         if (this.player.points > 21) {
-            this.messageBox.setText('Wygrywa dealer').show();
+            this.messageBox.setText('Dealer Won').show();
         }
     }
 
@@ -72,19 +72,19 @@ class Game {
         this.standButton.style.display = 'none';
 
         if (this.player.points < 21 && this.player.points == this.dealer.points) {
-            this.messageBox.setText('Remis').show();
+            this.messageBox.setText('Draw').show();
 
             return;
         };
 
         if (this.dealer.points > 21) {
-            this.messageBox.setText('Wygrywa Player').show();
+            this.messageBox.setText('Player Won').show();
 
             return;
         };
 
         if (this.player.points < this.dealer.points) {
-            this.messageBox.setText('Wygrywa dealer').show();
+            this.messageBox.setText('Dealer won').show();
 
             return;
         }
